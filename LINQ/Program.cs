@@ -1,10 +1,17 @@
-﻿namespace LINQ
+﻿//using C34PracticeLinqExersize;
+
+
+
+
+List<string> videoGameNames = new List<string>() { "Call of Duty", "Cyberpunk", "SpongeBob for the X Box" };
+
+videoGameNames.Add("Shrek the third");
+videoGameNames.Add("Chicken Little");
+
+
+var orderedVideoGames = videoGameNames.OrderBy(name => name.Length);
+
+foreach (var videoGame in orderedVideoGames)
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+    Console.WriteLine(videoGame);
 }
